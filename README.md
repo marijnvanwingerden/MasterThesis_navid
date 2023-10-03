@@ -1,2 +1,2 @@
 # MasterThesis
-you can find all the data and codes related to my master thesis for training the varitional auto encoder model and running the analysis for syntax here
+this repository is only a furter documentation on on datasets and coed for my master thesis.
