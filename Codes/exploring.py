@@ -47,7 +47,7 @@ for file in files:
         c+=1
        
     p_val=t[1].tolist()
-    cp_val=t[1].tolist()
+    cp_val=a[1].tolist()
     if w.index(sorted(w)[0])==w.index(sorted(w)[1]) and w.index(sorted(w)[0])==w.index(sorted(w)[2]):
         counter = 0
         elem_pos = []
