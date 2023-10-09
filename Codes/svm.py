@@ -23,8 +23,8 @@ for file in filenames:
     clf = svm.LinearSVC()
     k=int(len(f)/100)
     kf = KFold(n_splits=k)
-    kf.get_n_splits(f)
-    KFold(n_splits=k, random_state=None, shuffle=False)
+   # kf.get_n_splits(f)
+   # KFold(n_splits=k, random_state=None, shuffle=False)
     score=0
     for train_index, test_index in kf.split(f):
         X_train, X_test ,y_train,y_test = f[train_index], f[test_index],lables[train_index],lables[test_index]
