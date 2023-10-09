@@ -52,7 +52,7 @@ for file in files:
         counter = 0
         elem_pos = []
         for i in w:
-            if i == sorted(w)[1]:
+            if i == sorted(w)[0]:
                 elem_pos.append(counter)
                 counter = counter + 1
         wdim= [elem_pos]
