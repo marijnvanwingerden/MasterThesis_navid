@@ -157,7 +157,7 @@ def evaluate_model(loader, model, batch_size, nll_func, device='cuda'):
     for step, (input_batch, target_batch, lengths_batch) in tqdm(enumerate(loader), leave=False, total=len(loader), miniters=100, desc='Evaluating model'):
         logp, mean, logv, z = model(input_batch.to('cuda'), lengths_batch)
         # compute the loss
-        nllloss, kl, weight = loss_fn(logp, target_batch.to(device), lengths_batch, mean, logv, 'logistic', 10, 0.0025, 1500, nll_func)
+        nllloss, kl, weight = loss_fn(logp, target_batch.to(device), lengths_batch, mean, logv, 'logistic', step, 0.0025, 1500, nll_func)
         loss = (nllloss + t.tensor(weight) * kl)/batch_size
         val_loss += loss.item()
     val_loss /= step+1
